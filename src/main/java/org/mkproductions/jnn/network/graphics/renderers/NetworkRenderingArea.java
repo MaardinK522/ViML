@@ -54,6 +54,7 @@ public class NetworkRenderingArea extends NetworkRenderAble {
             layerX += layer.getWidth() + TinkeringNetHelper.getInstance().renderableLayerSpacing;
         }
         for (int currentLayerIndex = 1; currentLayerIndex < this.renderableLayers.size(); currentLayerIndex++) {
+            // TODO: Get the weights from the layers as per the indexes.
             int previousLayerIndex = currentLayerIndex - 1;
             RenderableLayer previousLayer = this.renderableLayers.get(previousLayerIndex);
             while (previousLayer.getRenderableNeurons().isEmpty() && previousLayerIndex != 0) {
